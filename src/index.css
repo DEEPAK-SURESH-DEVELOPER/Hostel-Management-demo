@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #0F4C5C;
+  --primary-dark: #083B4A;
+
+  --accent: #F4A62A;
+  --accent-dark: #D88912;
+
+  --background: #FFF9F0;
+  --surface: #FFFFFF;
+
+  --text-primary: #172A35;
+  --text-secondary: #64748B;
+
+  --border: #E8E1D6;
+
+  --success: #2E8B57;
+  --danger: #D9534F;
+  --warning: #F4A62A;
+
+  --shadow: 0 8px 30px rgba(15, 76, 92, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-color: rgba(15, 76, 92, 0.78) rgba(15, 76, 92, 0.08);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 76, 92, 0.08),
+    rgba(15, 76, 92, 0.035)
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 59, 74, 0.94) 0%,
+    rgba(15, 76, 92, 0.82) 55%,
+    rgba(43, 111, 105, 0.68) 100%
+  );
+  background-clip: padding-box;
+  animation: scrollbarShade 5s ease-in-out infinite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 59, 74, 0.98) 0%,
+    rgba(15, 76, 92, 0.9) 55%,
+    rgba(43, 111, 105, 0.78) 100%
+  );
+  background-clip: padding-box;
+}
+
+@keyframes scrollbarShade {
+  0%,
+  100% {
+    filter: brightness(0.94);
+  }
+
+  50% {
+    filter: brightness(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::-webkit-scrollbar-thumb {
+    animation: none;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+}

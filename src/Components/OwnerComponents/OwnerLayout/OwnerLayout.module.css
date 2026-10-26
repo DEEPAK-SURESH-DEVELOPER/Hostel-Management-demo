@@ -1,0 +1,32 @@
+.ownerLayout {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(145deg, #edf2ef 0%, #f7f5ef 58%, #eef3ef 100%);
+}
+
+.mainSection {
+  flex: 1;
+  min-width: 0;
+  margin-left: 270px;
+}
+
+.content {
+  padding: 25px;
+  min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 900px) {
+  .mainSection {
+  margin-left: 232px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainSection {
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}

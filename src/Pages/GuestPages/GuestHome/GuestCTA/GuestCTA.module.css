@@ -1,0 +1,232 @@
+.section {
+    width: 100%;
+    padding: 0 0 110px;
+    background: #fffaf1;
+}
+
+.container {
+    position: relative;
+    width: min(calc(100% - 64px), 1720px);
+    min-height: 520px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(79, 153, 143, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(215, 133, 52, 0.18),
+            transparent 30%
+        ),
+        #082525;
+    border-radius: 4px;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 48px, 700px);
+    text-align: center;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 22px;
+    display: grid;
+    place-items: center;
+    color: #e09a55;
+    background: rgba(215, 133, 52, 0.1);
+    border: 1px solid rgba(215, 133, 52, 0.22);
+    border-radius: 13px;
+    font-size: 18px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    color: #d78534;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.content h2 {
+    margin: 0;
+    color: #f7f3e9;
+    font-size: clamp(44px, 6vw, 78px);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -4px;
+}
+
+.content h2 em {
+    display: block;
+    color: #e3ad65;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.content p {
+    max-width: 520px;
+    margin: 24px auto 0;
+    color: #91aaa5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.primaryButton {
+    padding: 13px 21px;
+    color: #183333;
+    background: #f3eee4;
+    border-radius: 999px;
+}
+
+.primaryButton:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.primaryButton svg {
+    font-size: 9px;
+    transition: transform 0.25s ease;
+}
+
+.primaryButton:hover svg {
+    transform: translateX(3px);
+}
+
+.secondaryButton {
+    padding: 12px 20px;
+    color: #dce7e4;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+}
+
+.secondaryButton:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.backgroundText {
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.025);
+    font-size: clamp(90px, 15vw, 230px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -8px;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.decor {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.decorOne {
+    width: 300px;
+    height: 300px;
+    top: -180px;
+    right: -70px;
+}
+
+.decorTwo {
+    width: 220px;
+    height: 220px;
+    bottom: -150px;
+    left: -80px;
+}
+
+@media (max-width: 800px) {
+    .section {
+        padding-bottom: 80px;
+    }
+
+    .container {
+        width: calc(100% - 48px);
+        min-height: 470px;
+    }
+
+    .content h2 {
+        letter-spacing: -2.5px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+
+    .backgroundText {
+        bottom: -10px;
+        letter-spacing: -5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 36px);
+        min-height: 500px;
+        border-radius: 3px;
+    }
+
+    .content {
+        width: calc(100% - 32px);
+    }
+
+    .content h2 {
+        font-size: clamp(40px, 13vw, 58px);
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .backgroundText {
+        font-size: 75px;
+    }
+}

@@ -1,0 +1,399 @@
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 14px;
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 22px 0;
+  padding: 10px 22px 10px 25px;
+  border: 1px solid #ffffff42;
+  border-radius: 28px;
+  background-image: linear-gradient(105deg, #0d3035e8, #164745d9 56%, #194d49e8), url('../../../assets/owner-sidebar-bg.png');
+  background-position: center 46%;
+  background-size: cover;
+  box-shadow: 0 12px 34px #113b3526, inset 0 1px #ffffff2b;
+  color: #f9f7f0;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.welcomeSection p {
+  margin: 0 0 4px;
+  color: #e3c77e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.welcomeSection h2 {
+  margin: 0;
+  color: #fffdf6;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -.3px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notificationWrapper,
+.profileWrapper {
+  position: relative;
+}
+
+.iconButton {
+  position: relative;
+  display: flex;
+  width: 43px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff3a;
+  border-radius: 16px;
+  background: #ffffff18;
+  box-shadow: inset 0 1px #ffffff1d;
+  color: #f1d994;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.iconButton:hover {
+  transform: translateY(-1px);
+  background: #ffffff2a;
+}
+
+.notificationCount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  min-width: 19px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border: 2px solid #17423f;
+  border-radius: 20px;
+  background: #d5a54e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.notificationDropdown,
+.profileDropdown {
+  position: absolute;
+  top: calc(100% + 13px);
+  right: 0;
+  overflow: hidden;
+  border: 1px solid #e2e9e0;
+  border-radius: 20px;
+  background: #fffefa;
+  box-shadow: 0 18px 45px #0d282d38;
+  color: #304e46;
+}
+
+.notificationDropdown {
+  width: 360px;
+}
+
+.notificationHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #edf0e8;
+  background: linear-gradient(105deg, #f2f5ed, #fffefa);
+}
+
+.notificationHeader h3 {
+  margin: 0;
+  color: #173f3d;
+  font-size: 15px;
+}
+
+.notificationHeader span {
+  color: #b18543;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.notificationList {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.notificationItem {
+  display: flex;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f1ec;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.notificationItem:hover,
+.notificationItem.unread {
+  background: #f4f7f0;
+}
+
+.notificationIcon {
+  display: flex;
+  width: 37px;
+  height: 37px;
+  min-width: 37px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dfebdf;
+  border-radius: 14px;
+  background: #eaf2e8;
+  color: #648253;
+}
+
+.notificationContent h4 {
+  margin: 0 0 3px;
+  color: #234840;
+  font-size: 12px;
+}
+
+.notificationContent p {
+  margin: 0 0 3px;
+  color: #687a70;
+  font-size: 11px;
+}
+
+.notificationContent small {
+  color: #929c92;
+  font-size: 10px;
+}
+
+.emptyNotification {
+  padding: 35px 20px;
+  color: #819087;
+  text-align: center;
+}
+
+.emptyNotification svg {
+  margin-bottom: 8px;
+  color: #b58a4b;
+  font-size: 24px;
+}
+
+.emptyNotification p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.viewAllButton {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-top: 1px solid #edf0e8;
+  background: #fffefa;
+  color: #286153;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewAllButton:hover {
+  background: #f3f6ef;
+}
+
+.profileButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px 4px 4px;
+  border: 1px solid #ffffff2e;
+  border-radius: 22px;
+  background: #ffffff15;
+  color: inherit;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.profileButton:hover {
+  background: #ffffff25;
+}
+
+.profileAvatar,
+.largeAvatar {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f5d9909c;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #efd68f, #bd914b);
+  box-shadow: inset 0 1px #fff9d9;
+  color: #173c3d;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.profileInfo strong {
+  color: #fffdf5;
+  font-size: 11px;
+}
+
+.profileInfo span {
+  color: #c4d8d0;
+  font-size: 9px;
+}
+
+.profileDropdown {
+  width: 270px;
+}
+
+.dropdownProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+}
+
+.largeAvatar {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+}
+
+.dropdownProfile h4 {
+  margin: 0;
+  color: #234840;
+  font-size: 13px;
+}
+
+.dropdownProfile p {
+  margin: 4px 0 0;
+  color: #89958b;
+  font-size: 10px;
+  word-break: break-word;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: #edf0e8;
+}
+
+.profileDropdown button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border: 0;
+  background: #fffefa;
+  color: #465c52;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profileDropdown button:hover {
+  background: #f4f7f0;
+  color: #236050;
+}
+
+.profileDropdown button:last-child {
+  color: #ad6255;
+}
+
+.profileDropdown button:last-child:hover {
+  background: #fff6f1;
+  color: #963d36;
+}
+
+@media (max-width: 900px) {
+  .header {
+    margin-right: 16px;
+    margin-left: 16px;
+    padding-right: 16px;
+    padding-left: 18px;
+  }
+
+  .welcomeSection h2 {
+    font-size: 18px;
+  }
+
+  .rightSection {
+    gap: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    top: 10px;
+    min-height: 72px;
+    margin: 10px 10px 0;
+    padding: 8px 10px 8px 14px;
+    border-radius: 24px;
+  }
+
+  .welcomeSection h2 {
+    max-width: 48vw;
+    overflow: hidden;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .welcomeSection p {
+    font-size: 8px;
+  }
+
+  .rightSection {
+    gap: 8px;
+  }
+
+  .iconButton {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+  }
+
+  .profileButton {
+    padding: 2px;
+    border: 0;
+    background: transparent;
+  }
+
+  .profileInfo {
+    display: none;
+  }
+
+  .profileAvatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .notificationDropdown {
+    position: fixed;
+    top: 91px;
+    right: 12px;
+    width: min(360px, calc(100vw - 24px));
+  }
+
+  .profileDropdown {
+    right: -4px;
+    width: min(270px, calc(100vw - 24px));
+  }
+}

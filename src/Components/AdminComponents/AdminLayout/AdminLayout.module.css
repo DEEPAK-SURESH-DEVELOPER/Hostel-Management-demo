@@ -1,0 +1,47 @@
+.adminLayout {
+  --primary: #397e88;
+  --primary-dark: #173d54;
+  --accent: #d6925b;
+  --accent-dark: #ac7048;
+  --background: #eef3f5;
+  --surface: #ffffff;
+  --text-primary: #233e4e;
+  --text-secondary: #70818b;
+  --border: #dce6e8;
+  --shadow: 0 8px 28px rgba(24, 55, 75, .08);
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(145deg, #eef3f5 0%, #f8f6f0 55%, #eef3f4 100%);
+  color: var(--text-primary);
+}
+
+.mainSection {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 270px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 25px 22px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .mainSection {
+    margin-left: 232px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    margin-left: 88px;
+  }
+
+  .content {
+    padding: 18px 14px;
+  }
+}

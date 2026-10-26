@@ -1,0 +1,240 @@
+.sidebar {
+  position: fixed;
+  z-index: 1000;
+  top: 14px;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  width: 244px;
+  flex-shrink: 0;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 22px 14px 16px;
+  border: 1px solid #ffffff35;
+  border-radius: 30px 38px 30px 38px;
+  background-image: linear-gradient(160deg, #101d36e8, #142e49db 56%, #123748e8), url('../../../assets/admin-control-bg.png');
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 18px 44px #13243a2b, inset 0 1px #ffffff25;
+  color: #f8f9fc;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.logo,
+.navigation,
+.bottomSection {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3px 8px 21px;
+  border-bottom: 1px solid #ffffff26;
+}
+
+.brandMark {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  place-items: center;
+  border: 1px solid #8fd5dc8a;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #b7e3e7, #559eae);
+  box-shadow: 0 7px 18px #07152245, inset 0 1px #ffffffa8;
+  color: #102d43;
+  font-size: 17px;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.35px;
+}
+
+.logo h2 span {
+  color: #8fd3dc;
+}
+
+.logo p {
+  margin: 4px 0 0;
+  color: #b6c8d9;
+  font-size: 10px;
+  letter-spacing: .65px;
+}
+
+.navigation {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 23px 1px 12px;
+  scrollbar-width: none;
+}
+
+.navigation::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.navLink {
+  position: relative;
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  padding: 5px 11px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  color: #c7d4e2;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.navLink:hover {
+  transform: translateX(2px);
+  border-color: #a3dce41f;
+  background: #9dcbd51a;
+  color: #fff;
+}
+
+.icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  place-items: center;
+  border: 1px solid #a7dce429;
+  border-radius: 50%;
+  background: #b7d5e212;
+  color: #8fd3dc;
+  font-size: 14px;
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.navLink.active {
+  border-color: #93dbe263;
+  background: linear-gradient(100deg, #bce8e9ef, #e4f4f1ed);
+  box-shadow: 0 7px 20px #071d2b38, inset 0 1px #ffffff;
+  color: #17394d;
+  font-weight: 800;
+}
+
+.navLink.active .icon {
+  border-color: #7dbac78c;
+  background: linear-gradient(145deg, #d1eff0, #8ecbd2);
+  box-shadow: 0 4px 11px #426f7d2b;
+  color: #17394d;
+}
+
+.bottomSection {
+  padding: 13px 1px 0;
+  border-top: 1px solid #ffffff26;
+}
+
+.logoutButton {
+  display: flex;
+  width: 100%;
+  min-height: 46px;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 11px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: transparent;
+  color: #e4c2c6;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.logoutButton:hover {
+  border-color: #ffffff20;
+  background: #ffffff14;
+  color: #fff;
+}
+
+.logoutButton svg {
+  width: 35px;
+  color: #a1dce0;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    left: 10px;
+    width: 212px;
+  }
+
+  .logo h2 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 66px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 26px;
+  }
+
+  .logo {
+    justify-content: center;
+    padding: 3px 0 18px;
+  }
+
+  .logo > div:last-child,
+  .navLink > span:last-child,
+  .logoutButton > span {
+    display: none;
+  }
+
+  .brandMark {
+    width: 41px;
+    height: 41px;
+    flex-basis: 41px;
+  }
+
+  .navigation {
+    gap: 5px;
+  }
+
+  .navLink {
+    justify-content: center;
+    padding: 5px 2px;
+  }
+
+  .icon {
+    width: 37px;
+    height: 37px;
+    flex-basis: 37px;
+  }
+
+  .logoutButton {
+    justify-content: center;
+    padding: 5px 2px;
+  }
+
+  .logoutButton svg {
+    width: auto;
+  }
+}

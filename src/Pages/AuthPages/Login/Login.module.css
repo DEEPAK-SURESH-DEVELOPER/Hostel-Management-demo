@@ -1,0 +1,403 @@
+.loginPage {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(24px, 5vw, 64px);
+  isolation: isolate;
+  background:
+    linear-gradient(105deg, rgba(5, 26, 25, 0.88) 0%, rgba(8, 40, 38, 0.72) 48%, rgba(7, 29, 28, 0.5) 100%),
+    url('../../../assets/guest-hostel-hero.png') center 54% / cover no-repeat,
+    #0c302e;
+}
+
+.loginPage::before,
+.loginPage::after {
+  position: absolute;
+  z-index: -1;
+  width: min(48vw, 620px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  content: '';
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.loginPage::before {
+  top: -36%;
+  right: -12%;
+  background: radial-gradient(circle, rgba(229, 184, 104, 0.18), transparent 68%);
+}
+
+.loginPage::after {
+  bottom: -48%;
+  left: -15%;
+  background: radial-gradient(circle, rgba(76, 155, 144, 0.2), transparent 68%);
+}
+
+.loginLayout {
+  display: grid;
+  width: min(100%, 1160px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
+  align-items: center;
+  gap: clamp(44px, 8vw, 128px);
+  margin: auto;
+}
+
+.welcomePanel {
+  max-width: 560px;
+  color: #f7f3e9;
+  animation: riseIn 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.welcomeEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f0c878;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+}
+
+.welcomeEyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e8b968;
+  box-shadow: 0 0 14px rgba(232, 185, 104, 0.75);
+  content: '';
+}
+
+.welcomePanel h1 {
+  max-width: 550px;
+  margin: 23px 0 18px;
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 750;
+  letter-spacing: -4px;
+  line-height: 0.99;
+  text-wrap: balance;
+}
+
+.welcomePanel > p {
+  max-width: 440px;
+  margin: 0;
+  color: rgba(245, 244, 235, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.welcomeNote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 42px;
+  color: rgba(245, 244, 235, 0.78);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.noteDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e8b968;
+}
+
+.loginCard {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(30px, 4vw, 46px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 253, 247, 0.96), rgba(247, 245, 237, 0.91));
+  box-shadow:
+    0 30px 90px rgba(2, 19, 18, 0.32),
+    0 0 0 1px rgba(232, 185, 104, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  animation: riseIn 800ms 100ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.loginCard::before,
+.loginCard::after {
+  position: absolute;
+  z-index: 0;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  content: '';
+  filter: blur(36px);
+  opacity: 0.42;
+  pointer-events: none;
+  animation: glowDrift 8s ease-in-out infinite alternate;
+}
+
+.loginCard::before {
+  top: -120px;
+  right: -100px;
+  background: rgba(224, 171, 88, 0.32);
+}
+
+.loginCard::after {
+  bottom: -145px;
+  left: -120px;
+  background: rgba(55, 130, 121, 0.24);
+  animation-delay: -3s;
+}
+
+.logo,
+.formIntro,
+.loginCard form,
+.registerText {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 34px;
+}
+
+.brandMark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(225, 177, 97, 0.55);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #1b5a56, #103b39);
+  box-shadow: 0 8px 20px rgba(15, 65, 61, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #f2cf7c;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logo h2 {
+  margin: 0;
+  color: #173b39;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.logo p {
+  margin: 5px 0 0;
+  color: #71817d;
+  font-size: 12px;
+}
+
+.formIntro {
+  margin-bottom: 24px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid rgba(23, 59, 57, 0.1);
+}
+
+.formIntro span {
+  color: #b87936;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.formIntro p {
+  margin: 7px 0 0;
+  color: #71817d;
+  font-size: 12px;
+}
+
+.formGroup {
+  margin-bottom: 19px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #304845;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.formGroup input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #dce4df;
+  border-radius: 11px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.78);
+  color: #173b39;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.formGroup input::placeholder {
+  color: #a1ada8;
+}
+
+.formGroup input:focus {
+  border-color: #347d75;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(52, 125, 117, 0.11);
+}
+
+.loginCard form > button {
+  display: flex;
+  width: 100%;
+  min-height: 51px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 11px;
+  background: linear-gradient(110deg, #174b49, #0e3735);
+  box-shadow: 0 9px 22px rgba(18, 70, 66, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.13);
+  color: #fffaf0;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.loginCard form > button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: linear-gradient(110deg, #1d5c58, #12423f);
+  box-shadow: 0 13px 25px rgba(18, 70, 66, 0.27);
+}
+
+.loginCard form > button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loginCard form > button span {
+  color: #edc778;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.registerText {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(23, 59, 57, 0.1);
+  text-align: center;
+}
+
+.registerText p {
+  margin: 0;
+  color: #74817e;
+  font-size: 12px;
+}
+
+.registerText button {
+  margin-left: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #17605a;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.registerText button:hover {
+  color: #b87936;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowDrift {
+  from { transform: translate3d(-8px, 7px, 0) scale(0.92); }
+  to { transform: translate3d(12px, -9px, 0) scale(1.08); }
+}
+
+@media (max-width: 860px) {
+  .loginLayout {
+    width: min(100%, 490px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .welcomePanel {
+    text-align: center;
+  }
+
+  .welcomePanel h1 {
+    margin: 14px auto 10px;
+    font-size: clamp(36px, 7vw, 54px);
+    letter-spacing: -2px;
+  }
+
+  .welcomePanel > p {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .welcomeNote {
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .loginPage {
+    padding: 24px 18px;
+    background-position: 58% center;
+  }
+
+  .loginLayout {
+    gap: 22px;
+  }
+
+  .welcomeEyebrow {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .welcomePanel h1 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .loginCard {
+    padding: 27px 23px;
+    border-radius: 20px;
+  }
+
+  .logo {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .logo h2 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcomePanel,
+  .loginCard,
+  .loginCard::before,
+  .loginCard::after {
+    animation: none;
+  }
+
+  .formGroup input,
+  .loginCard form > button,
+  .registerText button {
+    transition: none;
+  }
+}

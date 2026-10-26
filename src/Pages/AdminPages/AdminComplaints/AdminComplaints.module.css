@@ -1,0 +1,680 @@
+.complaintsPage {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    display: block;
+    color: #397e88;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 7px;
+}
+
+.pageHeader h1 {
+    margin: 0;
+    color: #233e4e;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.pageHeader p {
+    margin: 8px 0 0;
+    color: #75827f;
+    font-size: 14px;
+}
+
+.totalComplaints {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 1px solid #e4eae7;
+    border-radius: 14px;
+    padding: 13px 17px;
+}
+
+.totalIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #fff0ed;
+    color: #d45c45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalComplaints strong {
+    display: block;
+    color: #233e4e;
+    font-size: 20px;
+}
+
+.totalComplaints span {
+    display: block;
+    color: #8b9794;
+    font-size: 11px;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    margin-bottom: 25px;
+}
+
+.summaryCard {
+    background: white;
+    border: 1px solid #e4eae7;
+    border-radius: 15px;
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 20px rgba(30, 55, 50, 0.035);
+}
+
+.summaryIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.openIcon {
+    background: #fff0ed;
+    color: #d45c45;
+}
+
+.progressIcon {
+    background: #fff4dc;
+    color: #bd7e13;
+}
+
+.resolvedIcon {
+    background: #e5f6ef;
+    color: #20865e;
+}
+
+.summaryCard span {
+    display: block;
+    color: #768480;
+    font-size: 12px;
+}
+
+.summaryCard strong {
+    display: block;
+    color: #233e4e;
+    font-size: 24px;
+    margin: 2px 0;
+}
+
+.summaryCard small {
+    color: #a0aaa7;
+    font-size: 10px;
+}
+
+.toolbar {
+    background: #ffffffdc;
+    border: 1px solid #dce6e8;
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.searchBox {
+    flex: 1;
+    max-width: 450px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: #f5f8f8;
+    border: 1px solid #dce6e8;
+    border-radius: 12px;
+    padding: 0 12px;
+    color: #397e88;
+    transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.searchBox:focus-within {
+    border-color: #78b5bd;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(57, 126, 136, .12);
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #374743;
+    font-size: 12px;
+}
+
+.statusFilters {
+    display: flex;
+    gap: 4px;
+    background: #edf3f4;
+    padding: 4px;
+    border-radius: 9px;
+}
+
+.statusFilters button {
+    border: none;
+    background: transparent;
+    color: #74817e;
+    padding: 8px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.statusFilters .activeFilter {
+    background: #fff;
+    color: #397e88;
+    box-shadow: 0 3px 9px rgba(24, 55, 75, .1);
+}
+
+.resultInfo {
+    color: #85918e;
+    font-size: 12px;
+    margin: 15px 2px;
+}
+
+.resultInfo strong {
+    color: #233e4e;
+    margin: 0 4px;
+}
+
+.complaintsList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.complaintCard {
+    background: white;
+    border: 1px solid #e4eae7;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+.complaintCard:hover {
+    border-color: #c8dbd6;
+    box-shadow: 0 10px 25px rgba(30, 55, 50, 0.06);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.titleArea {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.complaintIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: #e9efff;
+    color: #5271d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complaintId {
+    display: block;
+    color: #9aa5a2;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.titleArea h3 {
+    margin: 0;
+    color: #263936;
+    font-size: 16px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.open {
+    background: #fff0ed;
+    color: #d45c45;
+}
+
+.inProgress {
+    background: #fff4dc;
+    color: #bc7b0d;
+}
+
+.resolved {
+    background: #e5f6ed;
+    color: #20855d;
+}
+
+.rejected {
+    background: #f0f1f1;
+    color: #68726f;
+}
+
+.cardInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    border-top: 1px solid #edf1ef;
+    border-bottom: 1px solid #edf1ef;
+    padding: 15px 0;
+}
+
+.infoItem span {
+    display: block;
+    color: #9aa5a2;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.infoItem strong {
+    color: #43524e;
+    font-size: 12px;
+}
+
+.messagePreview {
+    color: #6b7975;
+    font-size: 12px;
+    line-height: 1.65;
+    margin: 15px 0;
+    min-height: 40px;
+}
+
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cardFooter > span {
+    color: #98a29f;
+    font-size: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.actions select {
+    border: 1px solid #dfe6e3;
+    border-radius: 8px;
+    padding: 7px 8px;
+    background: white;
+    color: #5a6864;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.viewButton,
+.deleteButton {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 11px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.viewButton {
+    background: #e7f5f1;
+    color: #14836f;
+}
+
+.deleteButton {
+    background: #fff0ed;
+    color: #d45c45;
+}
+
+.message {
+    background: white;
+    border: 1px solid #e4eae7;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: center;
+    color: #84908d;
+}
+
+.emptyState {
+    background: white;
+    border: 1px dashed #d5e0dc;
+    border-radius: 15px;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.emptyIcon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #f0f4f2;
+    color: #9aa6a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 13px;
+}
+
+.emptyState h3 {
+    margin: 0 0 6px;
+    color: #43514e;
+    font-size: 16px;
+}
+
+.emptyState p {
+    margin: 0;
+    color: #919c99;
+    font-size: 12px;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(20, 35, 33, 0.58);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 19px;
+    padding: 26px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.modalHeader h2 {
+    margin: 0;
+    color: #233e4e;
+    font-size: 21px;
+}
+
+.closeButton {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    background: #f0f3f2;
+    color: #65726f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sourceBanner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f5f8f7;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 18px;
+}
+
+.sourceIcon {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #e9efff;
+    color: #5271d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sourceBanner span {
+    display: block;
+    color: #929d9a;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.sourceBanner strong {
+    display: block;
+    color: #344440;
+    font-size: 13px;
+}
+
+.sourceBanner small {
+    display: block;
+    color: #397e88;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.detailGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    background: #f8faf9;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.detailItem span:first-child {
+    display: block;
+    color: #98a39f;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.detailItem strong {
+    color: #3d4c48;
+    font-size: 12px;
+}
+
+.statusControl {
+    margin-top: 18px;
+}
+
+.statusControl label {
+    display: block;
+    color: #4b5a56;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.statusControl select {
+    width: 100%;
+    border: 1px solid #dce5e2;
+    border-radius: 9px;
+    background: white;
+    padding: 10px;
+    color: #43514e;
+    outline: none;
+}
+
+.complaintMessage {
+    margin-top: 18px;
+}
+
+.complaintMessage > span {
+    display: block;
+    color: #98a39f;
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.complaintMessage > div {
+    background: #f8faf9;
+    border-radius: 11px;
+    padding: 15px;
+    color: #5e6c68;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #edf1ef;
+}
+
+.modalDeleteButton,
+.closeModalButton {
+    border: none;
+    border-radius: 9px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.modalDeleteButton {
+    background: #fff0ed;
+    color: #d45c45;
+}
+
+.closeModalButton {
+    background: #233e4e;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .summaryGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .complaintsList {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .pageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBox {
+        max-width: none;
+    }
+
+    .statusFilters {
+        overflow-x: auto;
+    }
+
+    .statusFilters button {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardInfo,
+    .detailGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .actions select {
+        flex: 1;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+}

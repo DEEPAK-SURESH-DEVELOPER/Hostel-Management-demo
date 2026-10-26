@@ -1,0 +1,391 @@
+.page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.topSection {
+    margin-bottom: 25px;
+}
+
+.pageLabel {
+    color: #b18442;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.topSection h1 {
+    margin: 5px 0;
+    color: #12352f;
+    font-size: 30px;
+}
+
+.topSection p {
+    margin: 0;
+    color: #74817e;
+    font-size: 14px;
+}
+
+.profileHero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    margin-bottom: 20px;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #12352f, #245b55);
+    color: #fff;
+}
+
+.avatar {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #c69b52;
+    color: #12352f;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.heroInfo h2 {
+    margin: 0 0 7px;
+    font-size: 25px;
+}
+
+.heroInfo p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 10px;
+    color: #d8e4e1;
+    font-size: 13px;
+}
+
+.heroInfo p svg {
+    color: #e1bf78;
+}
+
+.roleBadge {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e1bf78;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 20px;
+}
+
+.card {
+    padding: 24px;
+    border: 1px solid #e6ece9;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 23px;
+}
+
+.cardHeader > div:first-child span {
+    color: #b18442;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.cardHeader h3 {
+    margin: 4px 0 0;
+    color: #12352f;
+    font-size: 20px;
+}
+
+.editButton {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 8px;
+    background: #f5efe3;
+    color: #a27d39;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lockIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #f5efe3;
+    color: #b18442;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 7px;
+    color: #596764;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 12px;
+    border: 1px solid #dce4e1;
+    border-radius: 9px;
+    background: #fff;
+}
+
+.inputWrapper:focus-within {
+    border-color: #b18442;
+}
+
+.inputWrapper svg {
+    color: #a6b0ad;
+    font-size: 13px;
+}
+
+.inputWrapper input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #12352f;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.valueBox {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 12px;
+    border-radius: 9px;
+    background: #f7f9f8;
+    color: #12352f;
+    font-size: 13px;
+}
+
+.valueBox svg {
+    color: #b18442;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 8px;
+}
+
+.cancelButton,
+.saveButton,
+.passwordButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 15px;
+    border: none;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: #eef2f1;
+    color: #586561;
+}
+
+.saveButton {
+    background: #12352f;
+    color: #fff;
+}
+
+.saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.securityInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 11px;
+    background: #f7f9f8;
+}
+
+.securityIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #edf4f2;
+    color: #12352f;
+}
+
+.securityInfo strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #12352f;
+    font-size: 13px;
+}
+
+.securityInfo p {
+    margin: 0;
+    color: #808c88;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.passwordButton {
+    width: 100%;
+    background: #12352f;
+    color: #fff;
+}
+
+.passwordForm {
+    margin-top: 5px;
+}
+
+.accountInfo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 20px;
+    margin-top: 20px;
+    border: 1px solid #e6ece9;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.accountIcon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #edf4f2;
+    color: #12352f;
+    font-size: 18px;
+}
+
+.accountInfo span {
+    display: block;
+    margin-bottom: 3px;
+    color: #899591;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.accountInfo strong {
+    color: #12352f;
+    font-size: 13px;
+}
+
+.accountInfo > div:nth-child(2) strong {
+    color: #31905a;
+}
+
+.accountId {
+    margin-left: auto;
+    text-align: right;
+}
+
+.loading {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #74817e;
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .profileHero {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .accountInfo {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .accountId {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    .topSection h1 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .formActions {
+        flex-direction: column;
+    }
+
+    .cancelButton,
+    .saveButton {
+        width: 100%;
+    }
+}

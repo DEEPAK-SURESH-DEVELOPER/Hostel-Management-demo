@@ -1,0 +1,23 @@
+.scroll-reveal {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.scroll-reveal-text {
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.word {
+    display: inline-block;
+    will-change: opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .word {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+}

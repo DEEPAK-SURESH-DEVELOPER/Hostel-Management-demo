@@ -1,0 +1,686 @@
+.page {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 245px;
+    border-radius: 24px;
+    background: #173c38;
+    margin-bottom: 24px;
+}
+
+.heroPattern {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -130px;
+    top: -230px;
+    border-radius: 50%;
+    border: 80px solid rgba(255, 255, 255, 0.035);
+}
+
+.heroPattern::after {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: -220px;
+    top: 260px;
+    border-radius: 50%;
+    border: 60px solid rgba(255, 255, 255, 0.025);
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    min-height: 245px;
+    padding: 34px 38px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.avatarWrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 112px;
+    height: 112px;
+    border-radius: 32px;
+    background: #e6c87a;
+    color: #173c38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 900;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.onlineDot {
+    position: absolute;
+    right: 3px;
+    bottom: 5px;
+    width: 18px;
+    height: 18px;
+    background: #45d69c;
+    border: 4px solid #173c38;
+    border-radius: 50%;
+}
+
+.identity {
+    flex: 1;
+}
+
+.ownerLabel {
+    display: inline-block;
+    color: #9bd9c9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.identity h1 {
+    margin: 0;
+    color: white;
+    font-size: 31px;
+    font-weight: 800;
+}
+
+.identity p {
+    color: #b9d0cb;
+    margin: 7px 0 16px;
+    font-size: 13px;
+}
+
+.identityMeta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.identityMeta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #d3e2de;
+    font-size: 11px;
+}
+
+.identityMeta svg {
+    color: #7ed1bd;
+}
+
+.editProfileButton {
+    align-self: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 11px 15px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.editProfileButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 24px;
+}
+
+.profileCard,
+.businessCard,
+.sideCard,
+.tipCard {
+    background: white;
+    border: 1px solid #e4eae7;
+    border-radius: 19px;
+    box-shadow: 0 7px 25px rgba(28, 57, 52, 0.045);
+}
+
+.profileCard,
+.businessCard {
+    padding: 25px;
+    margin-bottom: 24px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.cardEyebrow {
+    display: block;
+    color: #159a82;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.cardHeader h2 {
+    margin: 0;
+    color: #213532;
+    font-size: 20px;
+}
+
+.inlineEdit {
+    border: none;
+    background: #eef8f5;
+    color: #159a82;
+    border-radius: 9px;
+    padding: 9px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.detailBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #edf1ef;
+    background: #fafcfb;
+    border-radius: 12px;
+}
+
+.detailIcon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #eaf6f2;
+    color: #159a82;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.detailBox span {
+    display: block;
+    color: #9aa5a2;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.detailBox strong {
+    color: #3d4c48;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.formGroup label {
+    display: block;
+    color: #465652;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.inputWrapper {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #dce5e2;
+    border-radius: 9px;
+    padding: 0 12px;
+    background: #fafcfb;
+}
+
+.inputWrapper:focus-within {
+    border-color: #159a82;
+    background: white;
+}
+
+.inputWrapper svg {
+    color: #94a09d;
+    font-size: 13px;
+}
+
+.inputWrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #364541;
+    font-size: 12px;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 22px;
+    padding-top: 17px;
+    border-top: 1px solid #edf1ef;
+}
+
+.cancelButton,
+.saveButton {
+    border: none;
+    border-radius: 9px;
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cancelButton {
+    background: #f0f3f2;
+    color: #65716e;
+}
+
+.saveButton {
+    background: #159a82;
+    color: white;
+}
+
+.businessBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #eaf7f1;
+    color: #21855f;
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fafcfb;
+    border: 1px solid #edf1ef;
+    border-radius: 13px;
+    padding: 16px;
+}
+
+.statIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hostelIcon {
+    background: #fff3df;
+    color: #bd7b12;
+}
+
+.roomIcon {
+    background: #edf0ff;
+    color: #5a72d4;
+}
+
+.accountIcon {
+    background: #e7f6ef;
+    color: #22855f;
+}
+
+.statItem strong {
+    display: block;
+    color: #263936;
+    font-size: 21px;
+}
+
+.statItem span {
+    color: #8b9794;
+    font-size: 10px;
+}
+
+.sideCard {
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.sideCardTop {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #edf1ef;
+}
+
+.sideIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #f0eaff;
+    color: #7555c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideCardTop span {
+    color: #9aa5a2;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sideCardTop h3 {
+    margin: 3px 0 0;
+    color: #293b37;
+    font-size: 15px;
+}
+
+.accountRows {
+    padding-top: 5px;
+}
+
+.accountRows > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f3f2;
+}
+
+.accountRows > div:last-child {
+    border-bottom: none;
+}
+
+.accountRows span {
+    color: #909b98;
+    font-size: 10px;
+}
+
+.accountRows strong {
+    color: #3e4c48;
+    font-size: 11px;
+    text-align: right;
+}
+
+.activeStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #20855d !important;
+    text-transform: capitalize;
+}
+
+.activeStatus i {
+    width: 6px;
+    height: 6px;
+    background: #34bd80;
+    border-radius: 50%;
+}
+
+.tipCard {
+    position: relative;
+    overflow: hidden;
+    padding: 22px;
+    background: #f2eee4;
+    border-color: #e9e1cf;
+}
+
+.tipShape {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #e2d5b8;
+    right: -50px;
+    top: -50px;
+}
+
+.tipCard > span {
+    position: relative;
+    z-index: 1;
+    color: #9b8352;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.tipCard h3 {
+    position: relative;
+    z-index: 1;
+    color: #4b4437;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 9px 0;
+}
+
+.tipCard p {
+    position: relative;
+    z-index: 1;
+    color: #837965;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.loading {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #788581;
+    font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .heroContent {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 28px;
+    }
+
+    .editProfileButton {
+        align-self: flex-start;
+    }
+
+    .detailsGrid,
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        border-radius: 18px;
+    }
+
+    .heroContent {
+        padding: 22px;
+    }
+
+    .avatar {
+        width: 85px;
+        height: 85px;
+        border-radius: 24px;
+        font-size: 32px;
+    }
+
+    .identity h1 {
+        font-size: 25px;
+    }
+
+    .identityMeta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profileCard,
+    .businessCard {
+        padding: 18px;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+    }
+
+    .businessBadge {
+        align-self: flex-start;
+    }
+}
+.passwordSection {
+    margin-top: 28px;
+    padding: 22px;
+    border: 1px solid #e7eceb;
+    border-radius: 16px;
+    background: #fafcfb;
+}
+
+.passwordHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.passwordIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #eef5f3;
+    color: #286660;
+}
+
+.passwordHeader span {
+    display: block;
+    margin-bottom: 4px;
+    color: #b18a3b;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.passwordHeader h3 {
+    margin: 0;
+    color: #244141;
+    font-size: 15px;
+}
+
+.passwordHeader p {
+    margin: 5px 0 0;
+    color: #899696;
+    font-size: 11px;
+}
+
+.passwordGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.passwordHint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 11px 13px;
+    border-radius: 10px;
+    background: #f4f7f6;
+    color: #7d8d8b;
+    font-size: 10px;
+}
+
+.passwordHint svg {
+    flex-shrink: 0;
+    color: #5b817c;
+}
+
+.formGroup small {
+    display: block;
+    margin-top: 6px;
+    color: #98a4a2;
+    font-size: 9px;
+}
+
+@media (max-width: 900px) {
+    .passwordGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .passwordSection {
+        padding: 16px;
+    }
+
+    .passwordHeader {
+        gap: 10px;
+    }
+
+    .passwordIcon {
+        width: 38px;
+        height: 38px;
+    }
+}

@@ -1,0 +1,492 @@
+.page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 6px;
+    color: #b18442;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.pageHeader h2 {
+    margin: 0;
+    color: #244141;
+    font-size: 24px;
+}
+
+.pageHeader p {
+    margin: 7px 0 0;
+    color: #84928f;
+    font-size: 11px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #eaf6ef;
+    color: #428060;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status svg {
+    font-size: 10px;
+}
+
+.heroCard {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    min-height: 270px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background: #12352f;
+    box-shadow: 0 8px 25px rgba(23, 63, 60, 0.12);
+}
+
+.heroImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 270px;
+    overflow: hidden;
+    background: #dce8e5;
+    color: #6f8f8b;
+    font-size: 50px;
+}
+
+.heroImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px;
+}
+
+.cardLabel {
+    display: block;
+    margin-bottom: 8px;
+    color: #e1bf78;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.heroContent h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.location {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 13px;
+    color: #bfd1ce;
+    font-size: 11px;
+}
+
+.location svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #e1bf78;
+}
+
+.heroContent p {
+    max-width: 650px;
+    margin: 17px 0 0;
+    color: #b8cdca;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.infoCard,
+.ownerCard,
+.facilityCard {
+    padding: 22px;
+    border: 1px solid #e7eceb;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(34, 65, 63, 0.04);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.headerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #edf5f3;
+    color: #286357;
+    font-size: 15px;
+}
+
+.cardHeader span {
+    display: block;
+    margin-bottom: 4px;
+    color: #b18442;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.cardHeader h3 {
+    margin: 0;
+    color: #294442;
+    font-size: 16px;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.detailItem {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #edf0ef;
+}
+
+.detailItem span {
+    display: block;
+    margin-bottom: 5px;
+    color: #9aa6a4;
+    font-size: 9px;
+}
+
+.detailItem strong {
+    display: block;
+    color: #435b58;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.detailItem .approved {
+    color: #428060;
+    text-transform: capitalize;
+}
+
+.ownerDetails {
+    display: flex;
+    gap: 15px;
+}
+
+.ownerAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #12352f;
+    color: #e1bf78;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.ownerInfo {
+    min-width: 0;
+}
+
+.ownerInfo h4 {
+    margin: 0;
+    color: #304d49;
+    font-size: 14px;
+}
+
+.ownerInfo > span {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 14px;
+    color: #9aa6a4;
+    font-size: 9px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    color: #667975;
+    font-size: 10px;
+    word-break: break-word;
+}
+
+.contactItem svg {
+    flex-shrink: 0;
+    color: #b18442;
+}
+
+.facilityCard {
+    margin-bottom: 20px;
+}
+
+.facilityGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.facilityItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    border: 1px solid #edf1f0;
+    border-radius: 11px;
+    background: #fafcfb;
+    color: #536c68;
+    font-size: 10px;
+}
+
+.facilityIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #edf5f3;
+    color: #286357;
+}
+
+.contactBanner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 22px;
+    border-radius: 15px;
+    background: #f4f7f6;
+}
+
+.contactBannerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #12352f;
+    color: #e1bf78;
+}
+
+.contactBanner > div:nth-child(2) {
+    flex: 1;
+}
+
+.contactBanner span {
+    display: block;
+    margin-bottom: 3px;
+    color: #b18442;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.contactBanner h3 {
+    margin: 0;
+    color: #304d49;
+    font-size: 14px;
+}
+
+.contactBanner p {
+    margin: 5px 0 0;
+    color: #7f8e8b;
+    font-size: 10px;
+}
+
+.contactButton {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    border-radius: 9px;
+    background: #286357;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.contactButton:hover {
+    background: #12352f;
+    color: #ffffff;
+}
+
+.emptyPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding: 30px;
+    border: 1px solid #e7eceb;
+    border-radius: 18px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.emptyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    background: #edf5f3;
+    color: #286357;
+    font-size: 25px;
+}
+
+.emptyPage h2 {
+    margin: 0;
+    color: #304d49;
+    font-size: 20px;
+}
+
+.emptyPage p {
+    max-width: 400px;
+    margin: 8px 0 20px;
+    color: #899693;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.emptyPage button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 9px;
+    background: #286357;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.noOwner,
+.noFacilities {
+    color: #8a9795;
+    font-size: 10px;
+}
+
+.noOwner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.noOwner svg {
+    color: #a2aeac;
+}
+
+@media (max-width: 1050px) {
+    .heroCard {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .facilityGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .pageHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .heroCard {
+        grid-template-columns: 1fr;
+    }
+
+    .heroImage {
+        min-height: 210px;
+    }
+
+    .heroContent {
+        padding: 25px;
+    }
+
+    .heroContent h3 {
+        font-size: 23px;
+    }
+
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .infoCard,
+    .ownerCard,
+    .facilityCard {
+        padding: 17px;
+    }
+
+    .facilityGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contactBanner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .contactButton {
+        margin-left: 57px;
+    }
+}
